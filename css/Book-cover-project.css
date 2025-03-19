@@ -1,0 +1,222 @@
+body{
+    font-family: "Yantramanav", sans-serif;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background:rgb(240, 203, 101);
+}
+
+.book-container{
+    background-color: rgb(240, 240, 213);
+    padding: 20px;
+    width: 400px;
+    height:600px;
+    overflow: hidden;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    border:rgb(240, 240, 213);
+    backface-visibility: hidden;
+    
+}
+
+.cover{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: all 0.5s ease;
+    transform-origin: 0 50%;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0);
+    
+}
+
+.page-2{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: no-repeat;
+    padding: 20px;
+    width: 400px;
+    height:600px;
+    background-size: cover;
+    transform-style:preserve-3d;
+    perspective: 1000px;
+     
+} 
+
+.page-2:hover .cover{
+    transform: rotateY(-135deg);
+}
+
+.page-2:hover .book-back{
+    transform: rotateY(-135deg); 
+}
+ 
+.book-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding:20px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    height: 600px;
+    width: 400px;
+    background-color: rgb(240, 240, 213);
+    transition: all 0.5s ease;
+    transform-origin: 0 50%;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0);
+}
+
+
+.down{
+
+    font-weight: 900;
+    color: red;
+    position: absolute;
+    font-size: 4.5em;
+    letter-spacing: 0.07em;
+    animation: down 5s ease-out ;
+    
+
+    
+}
+
+@keyframes down{
+
+    0% { bottom: 100%; }
+    50% { bottom: 50%; }
+    100% { bottom: 0%; }
+
+} 
+
+.with{
+    font-weight: 900;
+    color: red;
+    padding-left: 3.15em;
+    font-size: 4.5em;
+    letter-spacing: 0.05em;
+    animation: with 5s linear ;
+    position: relative;
+    
+    
+}
+
+@keyframes with{
+    0% { left: 100%;}
+    50% { left: 50%;}
+    100% { left: 0; }
+    
+}
+
+.the{
+    font-weight: 900;
+    color: rgb(6, 11, 120);
+    position: absolute ;
+    font-size: 4.5em;
+    margin-top: -0.5em;
+    letter-spacing: 0.05em;
+    animation: the 5s  ease-in ;
+}
+
+@keyframes the{
+    0% { right: 100%; }
+    100% { right: 65%; }
+   
+    
+}
+
+.system{
+    font-weight: 900;
+    color: rgb(6, 11, 120);
+    padding-left: 2em;
+    font-size: 4.5em;
+    margin-top: -0.5em;
+    animation: syst 5s linear ;
+    position: relative;
+    
+    
+}
+
+@keyframes syst{
+    0% { left: 100%;}
+    50% { left: 50%;}
+    100% { left: 0; }
+    
+}
+
+.author{
+    font-weight: 900;
+    color: rgb(246, 180, 0);
+    font-size: 4em;
+    margin-top: -0.5em;
+    position: relative;
+    animation: serj 7s ease-in-out forwards;
+
+}
+
+@keyframes serj{
+    0% { top: 100%;}
+    20% { top:50% }
+    40% { top: 0%; }
+    60% { top: 100%;}
+    80% { top:50%;}
+    100% { top: 0%; }
+    
+}
+
+.mini-title{
+    font-weight: 300;
+    text-align: right;
+    color: black;
+    margin-top: -0.75em;
+    letter-spacing: 0.1em;
+}
+.mini-title-2{
+    font-weight: 300;
+    text-align: right;
+    color: black;
+    font-size: 0.75em;
+    margin-top: -0.5em;
+}
+
+.face{
+   
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    cursor:pointer;
+    animation: face 5s ease-in-out;
+}
+
+
+@keyframes face{
+    0% { bottom: 100%;}
+    50% { bottom: 0%; }
+    100% { bottom: -55%; }
+}
+
+img{
+    
+    width: 440px;
+
+}
+
+.background{
+    background-size: cover;
+    padding:44px;
+    width: 440px;
+    height: 596px;
+    overflow: hidden;
+    
+}
